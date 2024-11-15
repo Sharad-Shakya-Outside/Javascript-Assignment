@@ -1,3 +1,5 @@
+//Define Array and objects and console them with appropriate console tools.
+
 //Defining array
 let arr = [10, 20, 30, 40, 50];
 console.table(arr); //Display the array in console in a form of table
