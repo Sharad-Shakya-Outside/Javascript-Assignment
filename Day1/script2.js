@@ -1,3 +1,5 @@
+//Write the code to convert celsius to fahrenheit and fahrenheit and and Console the output.
+
 //Function to convert celsius to Fahrenheit
 const celsiusToFahrenheit = (num) => {
     let fahrenheitValue = (num / 10) * 18 + 32; //celsius to fahrenheit formula
