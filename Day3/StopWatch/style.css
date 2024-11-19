@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Digital7';
+    src: url('assets/font-digital-7/digital-7.ttf');
+}
+
+
+.container {
+    max-width: 800px;
+    min-height: 500px;
+    margin-inline: auto;
+    margin-block: 100px;
+
+    background-color: #212121;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    padding-block: 0.5rem;
+    background-color: grey;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.start, .stop, .reset {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    cursor: pointer;
+    top: -1rem;
+}
+
+.start {
+    background-color: green;
+    left: 1rem;
+}
+.reset {
+    background-color: yellow;
+    right: 1rem;
+}
+
+.clock {
+    background-color: black;
+    min-width: 350px;
+
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Digital7';
+    font-size: 4rem;
+    color: red;
+}
