@@ -21,6 +21,11 @@
     background-color: #212121;
     display: grid;
     place-items: center;
+
+    p {
+        color: white;
+        font-size: 3rem;
+    }
 }
 
 .wrapper {
