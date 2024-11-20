@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.viewport {
+  width: 100vw;
+  height: 130vh;
+  background-color: aqua;
+}
+
+.boxes {
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.boxes__rotate {
+  width: 200px;
+  height: 200px;
+  color: white;
+}
+
+.boxes__rotate--once {
+  background-color: red;
+}
+
+.boxes__rotate--every {
+  background-color: black;
+}
+
+.rotate {
+  /* animation: rotate 1s forwards; */
+  transform: rotate(90deg);
+  transition: all 1s;
+}
+/* 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+} */
