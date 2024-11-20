@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <code>
+        function debounce(func) {
+            var timer;
+            return function(event) {
+                if(timer) clearTimeout(timer);
+                timer = setTimeout(func, 400, event);
+            }
+        }
+        
+        window.addEventListener("resize", debounce(function(e) {
+            console.log('Window is resized');
+        })) 
+    </code>
 
     <script src="script.js"></script>
 </body>
