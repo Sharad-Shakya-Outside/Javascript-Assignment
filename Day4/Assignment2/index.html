@@ -18,6 +18,9 @@
         
         window.addEventListener("resize", debounce(function(e) {
             console.log('Window is resized');
+            const resize = document.createElement('p');
+            resize.innerText = "Window is resized";
+            body.appendChild(resize);
         })) 
     </pre>
 
