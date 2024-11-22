@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Two Boxes - Day 4 Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="viewport">
+            <p>JavaScript code</p>
+            <pre>
+                let options = {
+                    root: null,
+                    rootMargin: "-100px",
+                    threshold: 0
+                };
+                
+                let observer = new IntersectionObserver(rotate, options);
+                
+                let boxOnce = document.querySelector("#box-once");
+                let boxEvery = document.querySelector("#box-every");
+                
+                observer.observe(boxOnce);
+                observer.observe(boxEvery);
+                
+                function rotate(entries, observer) {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("rotate");
+                
+                            if (entry.target.classList.contains("boxes__rotate--once")) {
+                                observer.unobserve(boxOnce);
+                            }
+                        } else {
+                            if (entry.target.classList.contains("boxes__rotate--every")) {
+                                entry.target.classList.remove("rotate");
+                            }
+                        }
+                    })
+                }
+            </pre>
+            <p>
+                CSS code:
+            </p>
+            <pre>
+                *,
+                *::before,
+                *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                }
+
+                .viewport {
+                width: 100vw;
+                height: 130vh;
+                background-color: aqua;
+                }
+
+                .boxes {
+                padding: 4rem;
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+                }
+
+                .boxes__rotate {
+                width: 200px;
+                height: 200px;
+                color: white;
+                }
+
+                .boxes__rotate--once {
+                background-color: red;
+                }
+
+                .boxes__rotate--every {
+                background-color: black;
+                }
+
+                .rotate {
+                /* animation: rotate 1s forwards; */
+                transform: rotate(90deg);
+                transition: all 1s;
+                }
+                /* 
+                @keyframes rotate {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(90deg);
+                    }
+                } */
+            </pre>
+        </section>
+
+        <section class="boxes">
+            <div id="box-once" class="boxes__rotate boxes__rotate--once">Only once</div>
+            <div id="box-every" class="boxes__rotate boxes__rotate--every">Every appearance</div>
+        </section>
+
+        <section class="viewport viewport--bottom"></section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
