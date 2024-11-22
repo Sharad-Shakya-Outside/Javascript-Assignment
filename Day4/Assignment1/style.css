@@ -8,8 +8,12 @@
 
 .viewport {
   width: 100vw;
-  height: 130vh;
+  height: max(auto, 130vh);
   background-color: aqua;
+}
+
+.viewport--bottom {
+  height: 130vh;
 }
 
 .boxes {
