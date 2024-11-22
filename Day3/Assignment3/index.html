@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            animation: bounce 5s linear infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateX(-50vw);
+            }
+            50% {
+                transform: translateX(calc(50vw - 30px));
+            }
+            100% {
+                transform: translateX(calc(30px - 50vw));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="wrapper">
+        <div class="box">box</div>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
