@@ -1,5 +1,16 @@
-const wrapper = document.querySelector('.wrapper');
-const box = document.querySelector('.box');
+// const wrapper = document.querySelector('.wrapper');
+// const box = document.querySelector('.box');
+const body = document.querySelector('body');
+
+const wrapper = document.createElement('div');
+const box = document.createElement('div');
+
+body.appendChild(wrapper);  
+wrapper.appendChild(box);
+
+wrapper.classList.add('wrapper');
+box.classList.add('box');
+box.innerText = "box";
 
 const boxWidth = "60px";
 const boxHeight = "60px";
@@ -17,4 +28,6 @@ box.style.backgroundColor = "red";
 box.style.color = "white";
 box.style.display = "grid";
 box.style.placeItems = "center";
+
+
 
