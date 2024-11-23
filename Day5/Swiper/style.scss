@@ -1,0 +1,82 @@
+@import './resets';
+
+body {
+    background-color: #212121;
+}
+
+.your-picks {
+    padding: 2rem;
+    background-color: red;
+
+    @media screen and (min-width: 768px) {
+        margin: 4rem;
+        border-radius: 40px;
+    }
+
+    &:hover {
+
+        .heading {
+            &::before {
+                width: 50%;
+            }
+        }
+    }
+
+    .heading {
+        color: white;
+        cursor: default;
+        position: relative;
+        width: max-content;
+
+        &::before {
+            content: "";
+            width: 0;
+            position: absolute;
+            height: 4px;
+            border-radius: 4px;
+            background-color: yellow;
+            bottom: -0.5rem;
+            z-index: 1;
+            transition: all 300ms;
+        }
+    }
+
+    .swiper-container {
+
+        max-width: 1000px;
+        margin-inline: auto;
+        margin-block: 4rem;
+
+        .swiper {
+            $self: ".swiper";
+            width: 100%;
+            height: 100%;
+
+            &-wrapper {
+
+                #{$self}-slide {
+                    height: 200px;
+                    background-position: center;
+                    background-size: cover;
+
+                    @media screen and (min-width: 768px) {
+                        height: 500px;
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: fill;
+                        border-radius: 5%;
+                    }
+
+                    &:not(&-prev, &-active, &-next) {
+                        visibility: hidden;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Day 5 Assignment</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body>
-    
 
-    <script src="script.js"></script>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+
+    <section class="your-picks">
+        <h1 class="heading">Your Picks</h1>
+
+        <div class="swiper-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/arcane.png" alt="arcane">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/housemd.png" alt="housemd">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/peacemaker.png" alt="peacemaker">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/breakingbad.png" alt="breakingbad">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>

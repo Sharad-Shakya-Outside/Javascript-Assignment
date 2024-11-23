@@ -1,7 +1,73 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #212121;
+}
+
+.your-picks {
+  padding: 2rem;
+  background-color: red;
+}
+@media screen and (min-width: 768px) {
+  .your-picks {
+    margin: 4rem;
+    border-radius: 40px;
+  }
+}
+.your-picks:hover .heading::before {
+  width: 50%;
+}
+.your-picks .heading {
+  color: white;
+  cursor: default;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.your-picks .heading::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 4px;
+  border-radius: 4px;
+  background-color: yellow;
+  bottom: -0.5rem;
+  z-index: 1;
+  transition: all 300ms;
+}
+.your-picks .swiper-container {
+  max-width: 1000px;
+  margin-inline: auto;
+  margin-block: 4rem;
+}
+.your-picks .swiper-container .swiper {
+  width: 100%;
+  height: 100%;
+}
+.your-picks .swiper-container .swiper-wrapper .swiper-slide {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .your-picks .swiper-container .swiper-wrapper .swiper-slide {
+    height: 500px;
+  }
+}
+.your-picks .swiper-container .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 5%;
+}
+.your-picks .swiper-container .swiper-wrapper .swiper-slide:not(.your-picks .swiper-container .swiper-wrapper .swiper-slide-prev, .your-picks .swiper-container .swiper-wrapper .swiper-slide-active, .your-picks .swiper-container .swiper-wrapper .swiper-slide-next) {
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
