@@ -21,6 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
+  transition: all 300ms;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -31,7 +32,11 @@ body {
     z-index: 999;
   }
 }
-.header__logo blockquote {
+.header__logo a {
+  text-decoration: none;
+  color: white;
+}
+.header__logo a blockquote {
   font-size: 3rem;
   font-weight: 700;
 }
@@ -71,6 +76,12 @@ body {
     padding: 1rem;
     border-radius: 20%;
   }
+}
+.header .main-nav .navbar .navbar__item {
+  padding: 1rem;
+}
+.header .main-nav .navbar .navbar__item:hover {
+  background-color: rgb(160, 94, 221);
 }
 .header .main-nav .navbar .navbar__item .navbar__link {
   text-decoration: none;
