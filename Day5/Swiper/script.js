@@ -7,20 +7,20 @@ const header = document.querySelector('.header');
 const navbarThreshold = 150;
 
 togglerButton.addEventListener('click', () => {
-    navbar.classList.toggle('hidden');;
+    navbar.classList.toggle('hidden');
 })
 
 window.onscroll = function() {
-    console.log('hello')
-}
+    
+    if (window.innerWidth > 768) {
 
-window.onscroll = function() {
-    if (window.scrollY > navbarThreshold) {
-        header.style.margin = "0";  
-        header.style.borderRadius = "0";  
-    } else {
-        header.style.margin = "3rem 4rem 2rem 4rem";
-        header.style.borderRadius = "40px";
+        if (window.scrollY > navbarThreshold) {
+            header.style.margin = "0";  
+            header.style.borderRadius = "0";  
+        } else {
+            header.style.margin = "3rem 4rem 2rem 4rem";
+            header.style.borderRadius = "40px";
+        }
     }
 }
 
