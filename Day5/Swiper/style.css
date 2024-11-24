@@ -46,11 +46,17 @@ body {
 .header .main-nav .toggler {
   display: block;
   cursor: pointer;
+  background-color: blueviolet;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .header .main-nav .toggler {
     display: none;
   }
+}
+.header .main-nav .toggler__icon {
+  width: 40px;
+  fill: white;
 }
 .header .main-nav .hidden {
   display: none;
@@ -75,6 +81,7 @@ body {
     background-color: #212121;
     padding: 1rem;
     border-radius: 20%;
+    z-index: 999;
   }
 }
 .header .main-nav .navbar .navbar__item {
