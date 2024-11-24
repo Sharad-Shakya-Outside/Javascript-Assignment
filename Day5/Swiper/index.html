@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 5 Assignment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="header__logo">
+            <a href="#">
+                <blockquote>Logo.</blockquote>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="toggler">
+                <span class="toggle__icon">I</span>
+            </button>
+
+            <div class="navbar navbar--collapse hidden">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#your-picks" class="navbar__link">Your Picks</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#trending" class="navbar__link">Trending</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="your-picks" class="your-picks">
+        <h1 class="heading">Your Picks</h1>
+
+        <div class="swiper-container">
+            <div class="swiper swiperYourPick">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/arcane.png" alt="arcane">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/housemd.png" alt="housemd">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/peacemaker.png" alt="peacemaker">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/breakingbad.png" alt="breakingbad">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trending" class="trending">
+        <h1 class="heading">Trending</h1>
+
+        <div class="swiper-container">
+            <div class="swiper swiperTrending">
+                <div class="swiper-wrapper swiperTrending">
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/arcane.png" alt="arcane">
+                    </div>
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/housemd.png" alt="housemd">
+                    </div>
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/peacemaker.png" alt="peacemaker">
+                    </div>
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/breakingbad.png" alt="breakingbad">
+                    </div>
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/breakingbad.png" alt="breakingbad">
+                    </div>
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/breakingbad.png" alt="breakingbad">
+                    </div>
+                    <div class="swiper-slide swiperTrending">
+                        <img src="assets/img/breakingbad.png" alt="breakingbad">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
