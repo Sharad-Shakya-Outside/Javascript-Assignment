@@ -1,6 +1,13 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
-const swiper = new Swiper('.mySwiper', {
+const togglerButton = document.querySelector('.toggler');
+const navbar = document.querySelector('.navbar--collapse')
+
+togglerButton.addEventListener('click', () => {
+    navbar.classList.toggle('hidden');;
+})
+
+const swiperYourPick = new Swiper('.swiperYourPick', {
     // Optional parameters
     loop: true,
 
@@ -32,4 +39,38 @@ const swiper = new Swiper('.mySwiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+});
+
+const swiperTrending = new Swiper('.swiperTrending', {
+    loop: true,
+
+    spaceBetween: 80,
+    slidesPerView: "auto",
+    speed: 6000,
+    allowTouchMove: false,
+
+    //autoplay feature
+    autoplay: {
+        delay: 1,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    //responsive breakpoints
+    // breakpoints: {
+    //     640: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 20,
+    //     },
+    //     768: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 40,
+    //     },
+    //     1024: {
+    //         slidesPerView: 5,
+    //         spaceBetween: 50,
+    //     },
+    // },
 });

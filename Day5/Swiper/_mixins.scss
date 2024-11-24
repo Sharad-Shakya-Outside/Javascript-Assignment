@@ -1,0 +1,39 @@
+@mixin section-container($bg-color) {
+    background-color: $bg-color;
+    padding: 2rem;
+
+    @media screen and (min-width: 768px) {
+        margin: 4rem;
+        border-radius: 40px;
+    }
+}
+
+@mixin section-heading($heading-color, $underline-color) {
+    color: $heading-color;
+    cursor: default;
+    position: relative;
+    width: max-content;
+
+    &::before {
+        content: "";
+        width: 0;
+        position: absolute;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $underline-color;
+        bottom: -0.5rem;
+        z-index: 1;
+        transition: all 300ms;
+    }
+}
+
+@mixin hover-to-show-heading-line {
+    &:hover {
+
+        .heading {
+            &::before {
+                width: 50%;
+            }
+        }
+    }
+}
