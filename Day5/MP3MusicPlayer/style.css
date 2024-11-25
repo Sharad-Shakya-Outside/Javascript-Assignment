@@ -8,4 +8,39 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.player__header .player__track-name {
+  font-size: 3rem;
+}
+.player__header .player__track-artist {
+  color: white;
+}
+.player__art {
+  border-radius: 20%;
+}
+.player__controls .player__slider {
+  width: 100%;
+}
+.player__controls .player__slider .current-time {
+  font-size: 0.8rem;
+}
+.player__controls .player__slider .seek-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #83A9FF;
+  transition: opacity 0.2s;
+}
+.player__controls .player__slider .seek-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 3px solid #3774FF;
+  cursor: grab;
+  border-radius: 100%;
 }/*# sourceMappingURL=style.css.map */

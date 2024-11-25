@@ -5,34 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MP3 Music Player</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <main class="music-player">
-        <header class="music-player__header">
-            <h1 class="music-player__songname">Song</h1>
-            <blockquote class="music-player__artist">Pomme</blockquote>
+    <main class="player">
+        <header class="player__header">
+            <h1 id="track-name" class="player__track-name">Song</h1>
+            <blockquote id="track-artist" class="player__track-artist">Pomme</blockquote>
         </header>
 
-        <section class="music-player__art">
-            <img class="music-player__songart" src="" alt="">
+        <section id="track-art" class="player__art">
         </section>
 
-        <section class="music-player__controls">
-            <div class="music-player__detailbutton"></div>
+        <section class="player__controls">
+            <!-- <div class="player__detailbutton"></div> -->
 
-            <div class="music-player__progressbar">
-
-                <span class="intital-time">00:00</span>
-                <span class="end-time">02:28</span>
+            <div class="player__slider">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="100" class="seek-slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
             </div>
 
-            <div class="music-player__play-pause">
-                <button>
-                    Play
-                </button>
+            <div class="player__buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                     <i class="fa fa-step-backward fa-2x"></i>
+                 </div>
+                 <div class="playpause-track" onclick="playPauseTrack()">
+                     <i class="fa fa-play-circle fa-5x"></i>
+                 </div>
+                 <div class="next-track" onclick="nextTrack()">
+                     <i class="fa fa-step-forward fa-2x"></i>
+                 </div>
             </div>
         </section>
     </main>
     
+    <script src="script.js" defer></script>
 </body>
 </html>
