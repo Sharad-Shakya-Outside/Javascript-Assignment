@@ -10,20 +10,22 @@
 </head>
 <body>
     <main class="player">
-        <header class="player__header">
-            <h1 id="track-name" class="player__track-name">Song</h1>
-            <blockquote id="track-artist" class="player__track-artist">Pomme</blockquote>
-        </header>
-
-        <section id="track-art" class="player__art">
-        </section>
+        <div class="player__track-container">
+            <header class="player__header">
+                <h1 id="track-name" class="player__track-name"></h1>
+                <blockquote id="track-artist" class="player__track-artist"></blockquote>
+            </header>
+    
+            <section id="track-art" class="player__art">
+            </section>
+        </div>
 
         <section class="player__controls">
             <!-- <div class="player__detailbutton"></div> -->
 
             <div class="player__slider">
+                <input type="range" min="0" max="100" value="100" class="seek-slider" onchange="seekTo()">
                 <div class="current-time">00:00</div>
-                <input type="range" min="1" max="100" value="100" class="seek-slider" onchange="seekTo()">
                 <div class="total-duration">00:00</div>
             </div>
 
