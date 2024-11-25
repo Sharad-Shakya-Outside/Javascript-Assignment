@@ -10,7 +10,10 @@ togglerButton.addEventListener('click', () => {
     navbar.classList.toggle('hidden');
 })
 
-window.onscroll = function() {
+window.addEventListener("scroll", handleScrollForNavbar);
+window.addEventListener("resize", handleScrollForNavbar);
+
+function handleScrollForNavbar() {
     
     if (window.innerWidth > 768) {
 
@@ -21,6 +24,9 @@ window.onscroll = function() {
             header.style.margin = "3rem 4rem 2rem 4rem";
             header.style.borderRadius = "40px";
         }
+    } else {
+        header.style.margin = "";
+        header.style.borderRadius = "";
     }
 }
 
@@ -63,8 +69,7 @@ const swiperTrending = new Swiper('.swiperTrending', {
 
     spaceBetween: 80,
     slidesPerView: "auto",
-    speed: 5000,
-    allowTouchMove: false,
+    speed: 1000,
 
     //autoplay feature
     autoplay: {
