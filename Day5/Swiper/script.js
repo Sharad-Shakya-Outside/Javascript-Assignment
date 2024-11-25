@@ -14,12 +14,12 @@ window.addEventListener("scroll", handleScrollForNavbar);
 window.addEventListener("resize", handleScrollForNavbar);
 
 function handleScrollForNavbar() {
-    
+
     if (window.innerWidth > 768) {
 
         if (window.scrollY > navbarThreshold) {
-            header.style.margin = "0";  
-            header.style.borderRadius = "0";  
+            header.style.margin = "0";
+            header.style.borderRadius = "0";
         } else {
             header.style.margin = "3rem 4rem 2rem 4rem";
             header.style.borderRadius = "40px";
@@ -30,7 +30,7 @@ function handleScrollForNavbar() {
     }
 }
 
-const swiperYourPick = new Swiper('.swiperYourPick', {
+const swiperYourPick = new Swiper('.swiper-your-pick', {
     // Optional parameters
     loop: true,
 
@@ -64,7 +64,7 @@ const swiperYourPick = new Swiper('.swiperYourPick', {
     },
 });
 
-const swiperTrending = new Swiper('.swiperTrending', {
+const swiperTrending = new Swiper('.swiper-trending', {
     loop: true,
 
     spaceBetween: 80,
@@ -77,7 +77,7 @@ const swiperTrending = new Swiper('.swiperTrending', {
         disableOnInteraction: false,
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination-t",
         clickable: true,
     },
 });

@@ -167,7 +167,7 @@ body {
 
         $block: ".swiper";
 
-        #{$block}#{$block}Trending {
+        #{$block}-trending {
             margin-top: 4rem;
             mask-image: linear-gradient(to right,
                     transparent 0%,
@@ -175,11 +175,11 @@ body {
                     white 90%,
                     transparent 100%);
 
-            #{$block}-wrapper#{$block}Trending {
+            #{$block}-wrapper {
                 transition-timing-function: linear;
                 align-items: center;
 
-                #{$block}-slide#{$block}Trending {
+                #{$block}-slide {
                     width: 12rem;
                     display: flex;
                     align-items: center;
