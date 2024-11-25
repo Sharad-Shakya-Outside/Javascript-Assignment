@@ -74,7 +74,7 @@ body {
                 gap: 2rem;
                 list-style: none;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 767px) {
                     position: absolute;
                     flex-direction: column;
                     gap: 1rem;
