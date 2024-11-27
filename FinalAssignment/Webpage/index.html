@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Final Assignment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="progress">
+        <span class="progress-bar"></span>
+    </div>
+
+    <header id="header" class="header">
+        <div class="header__logo">
+            <a href="#">
+                <img class="header__image" src="assets/images/apex-white-nav-logo.svg" alt="spaceys logo">
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="toggler">
+                <svg class="toggler__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        fill="white" d="M61.1 224C45 224 32 211 32 194.9c0-1.9 .2-3.7 .6-5.6C37.9 168.3 78.8 32 256 32s218.1 136.3 223.4 157.3c.5 1.9 .6 3.7 .6 5.6c0 16.1-13 29.1-29.1 29.1L61.1 224zM144 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm240 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32zM272 96a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zM16 304c0-26.5 21.5-48 48-48l384 0c26.5 0 48 21.5 48 48s-21.5 48-48 48L64 352c-26.5 0-48-21.5-48-48zm16 96c0-8.8 7.2-16 16-16l416 0c8.8 0 16 7.2 16 16l0 16c0 35.3-28.7 64-64 64L96 480c-35.3 0-64-28.7-64-64l0-16z" />
+                </svg>
+            </button>
+
+            <div class="navbar navbar--collapse hidden">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#leadspace" class="navbar__link">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#maps" class="navbar__link">Maps</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#updates" class="navbar__link">News Updates</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#footer" class="navbar__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section id="leadspace" class="leadspace panel">
+            <div class="leadspace__content">
+
+                <blockquote class="leadspace__subtitle h2">Pick your character. Round up your squad. Show everyone what
+                    Legends are made of.</blockquote>
+                <blockquote class="leadspace__subtitle h3">PlayStation&reg;4, PlayStation&reg;4, Xbox One, Xbox Series
+                    X|S, Nintendo Switch, PC via EA App, Steam and Epic Games Store</blockquote>
+                <button class="btn-primary leadspace__btn">
+                    Play Now
+                </button>
+            </div>
+
+            <div class="leadspace__image-container">
+                <img class="leadspace__image" src="assets/images/bloodhound.png" alt="bloodhound">
+            </div>
+            <div class="leadspace__image-container">
+                <img class="leadspace__image" src="assets/images/newcastle.png" alt="newcastle">
+            </div>
+            <div class="leadspace__image-container">
+                <img class="leadspace__image" src="assets/images/valkyrie.png" alt="valkyrie">
+            </div>
+            <div class="leadspace__image-container">
+                <img class="leadspace__image" src="assets/images/pathfinder.png" alt="pathfinder">
+            </div>
+        </section>
+
+        <section class="showcase panel">
+            <section id="maps" class="maps">
+                <h1 class="maps__header h1">Maps</h1>
+                <div class="swiper fade-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/map-broken-moon.jpg" />
+                            <h2 id="map-title" class="h2">Broken Moon</h2>
+                            <blockquote id="map-description">
+                                Boreas’ moon, Cleo, was once whole–until a meteor and a myth broke it apart.
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/map-e-district.jpg" />
+                            <h2 id="map-title" class="h2">
+                                E District
+                            </h2>
+                            <blockquote id="map-description">
+                                Home to Gaea’s most luxurious shopping mall, a bustling business center, and a night market with some of the planet’s best cuisine.
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/map-kings-canyon.jpg" />
+                            <h2 id="map-title" class="h2">King's Canyon</h2>
+                            <blockquote id="map-description">
+                                Once a simple settlement on Solace, the island known as Kings Canyon didn't thrive until the IMC chose it as a hub for research and development.
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 id="map-title" class="h2">Olympus</h2>
+                            <img src="assets/images/map-olympus.jpg" />
+                            <blockquote id="map-description">
+                                Once a city built on dreams, Olympus was a utopia floating in clouds above Psamathe. Here, the brightest minds in the Outlands could gather and exchange ideas,
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 id="map-title" class="h2">Storm Point</h2>
+                            <img src="assets/images/map-stormpoint.jpg" />
+                            <blockquote id="map-description">
+                                This deserted island wasn’t always so deserted. Beautiful and teeming with resources, Storm Point was the prime candidate for early IMC expeditions to planet Gaea.
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 id="map-title" class="h2">World's Edge</h2>
+                            <img src="assets/images/map-worlds-edge.jpg" />
+                            <blockquote id="map-description">
+                                A harsh planet beset by intense volcanic activity, Talos was once deemed uninhabitable until a rare mineral compound was found beneath its surface.
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <section id="updates" class="updates maps">
+                <h1 class="maps__header h1">Game updates</h1>
+                <div class="swiper fade-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/update-1.jpg" />
+                            <h2 id="map-title" class="h2">From The Rift</h2>
+                            <blockquote id="map-description">
+                                Relive that first hot drop, restore your squad with Lifeline revived, and review all of the updates coming in From The Rift.
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/update-2.jpg" />
+                            <h2 id="map-title" class="h2">Techno Terror Collection Event</h2>
+                            <blockquote id="map-description">
+                                Have a scart good time with Trick N' Treat Trios returning, Pathfinder's Prestige Skin "Apex Mecha", and see which Legends are dressing up!
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/update-3.jpg" />
+                            <h2 id="map-title" class="h2">Space Hunt Event</h2>
+                            <blockquote id="map-description">
+                                An all-new objective based LTM and “Serpent’s Sting” universal melee item, earn Bounty Bucks, and more with our mid-season patch.
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/update-4.jpg" />
+                            <h2 id="map-title" class="h2">Shockwave Patch Notes</h2>
+                            <blockquote id="map-description">
+                                Get charged up for Shockwave’s launch with class perks, balance and Legend updates, and more.
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer panel">
+        <div class="footer__container">
+            <nav class="footer__nav">
+                <ul class="footer__links">
+                    <li class="footer__link">
+                        <a href="">Home</a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">About</a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">Legends</a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">FAQ</a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">News</a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">Media</a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">Forums</a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <div class="footer__contact">
+                <div class="footer__logos">
+                    <div class="logo-container">
+                        <img src="assets/images/apex-white-nav-logo.svg" alt="apex logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="assets/images/apex-global-series-footer-logo.svg" alt="apex global series logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="assets/images/apex-respawn-white-logo.png" alt="respawn entertainment logo">
+                    </div>
+                </div>
+    
+                <div class="horizontal-line">
+                </div>
+    
+                <div class="footer__socials">
+                    <h1 class="h3">Join the conversation</h1>
+                    <ul class="social-list">
+                        <li class="social-link">
+                            <a href="">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li class="social-link">
+                            <a href="">
+                                <span class="icon-youtube"></span>
+                            </a>
+                        </li>
+                        <li class="social-link">
+                            <a href="">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </li>
+                        <li class="social-link">
+                            <a href="">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                        <li class="social-link">
+                            <a href="">
+                                <span class="icon-twitch"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <span class="bubbles"></span>
+        <span class="bubbles"></span>
+        <span class="bubbles"></span>
+        <span class="bubbles"></span>
+    </footer>
+
+
+    <script src="js/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
