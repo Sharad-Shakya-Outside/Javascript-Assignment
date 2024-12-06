@@ -1,0 +1,17 @@
+.btn-primary {
+    padding-inline: 2rem;
+    background: transparent;
+    border: none;
+    padding-block: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid;
+    width: max-content;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 1rem;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
