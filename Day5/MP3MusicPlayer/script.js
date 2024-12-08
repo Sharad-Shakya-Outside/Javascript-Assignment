@@ -1,12 +1,14 @@
 let trackName = document.querySelector('#track-name');
 let trackArtist = document.querySelector('#track-artist');
 let trackArt = document.querySelector('#track-art');
+let trackTooltip = document.querySelector('.track-tooltip')
 
 let playPauseBtn = document.querySelector('.playpause-track');
 let nextBtn = document.querySelector('.next-track');
 let prevBtn = document.querySelector('.prev-track');
 
 let seekSlider = document.querySelector('.seek-slider');
+let seekSliderContainer = document.querySelector('.seek-slider-container');
 let currentTime = document.querySelector('.current-time');
 let totalDuration = document.querySelector('.total-duration');
 
@@ -55,6 +57,7 @@ function loadTrack(trackIndex) {
 
     trackArt.style.backgroundImage = "url(" + trackList[trackIndex].img + ")";
     trackName.textContent = trackList[trackIndex].name;
+    trackTooltip.textContent = trackList[trackIndex].name;
     trackArtist.textContent = trackList[trackIndex].artist;
 
     updateTimer = setInterval(setUpdate, 1000);
@@ -97,14 +100,14 @@ function playPauseTrack() {
 function playTrack() {
     currentTrack.play();
     isPlaying = true;
-    trackArt.classList.add('rotate');
+    trackArt.style.animationPlayState = 'running';
     playPauseBtn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
 }
 
 function pauseTrack() {
     currentTrack.pause();
     isPlaying = false;
-    trackArt.classList.remove('rotate');
+    trackArt.style.animationPlayState = 'paused';
     playPauseBtn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
 
